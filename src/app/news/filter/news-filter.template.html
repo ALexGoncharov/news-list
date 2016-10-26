@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-sm-4 col-md-3 pull-right">
+      <select class="form-control" ng-model="$ctrl.selectedCategory" ng-change="$ctrl.update()">
+        <option ng-repeat="newsCat in $ctrl.newsCategories" value="{{newsCat.key}}">{{newsCat.name}}</option>
+      </select>
+    </div>
+  </div>
+</div>

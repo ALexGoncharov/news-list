@@ -1,0 +1,42 @@
+<div class="container">
+  <a href="#!/{{$ctrl.newsCategory}}" class="btn btn-primary btn-xs p">&larr; В категорию</a>
+  <h1>{{$ctrl.newsItem.title}}</h1>
+  
+  <div class="article">
+    <img ng-src="{{$ctrl.newsItem.imageURL}}" class="article-preview"/>
+
+    <div class="fulltext" ng-bind-html="$ctrl.newsItem.fulltext"></div>
+  </div>
+  <div class="pagination">
+    <div class="btn-toolbar">
+      <a href=""
+        class="btn btn-social-icon btn-vk"
+        socialshare
+        socialshare-provider="vk"
+        socialshare-url="{{$ctrl.locationHref}}"
+        socialshare-text="{{$ctrl.newsItem.title}}"
+        socialshare-description=""
+        socialshare-media="{{$ctrl.newsItem.imageURL}}"
+        socialshare-redirect-uri=""
+        ><span class="fa fa-vk"></span></a>
+      <a href=""
+        class="btn btn-social-icon btn-facebook"
+        socialshare
+        socialshare-provider="facebook"
+        socialshare-url="{{$ctrl.locationHref}}"
+        socialshare-text="{{$ctrl.newsItem.title}}"
+        socialshare-description=""
+        socialshare-media="{{$ctrl.newsItem.imageURL}}"
+        socialshare-redirect-uri=""
+        ><span class="fa fa-facebook"></a>
+      <a href=""
+        class="btn btn-social-icon btn-google"
+        socialshare
+        socialshare-provider="google"
+        socialshare-url="{{$ctrl.locationHref}}"
+        socialshare-redirect-uri=""
+        ><span class="fa fa-google-plus"></a>
+    </div>
+  </div>
+</div>
+  

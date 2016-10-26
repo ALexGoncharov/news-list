@@ -1,0 +1,27 @@
+<news-filter></news-filter>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{$ctrl.title}}</h1>
+      <div class="row">
+        <div class="news">
+          <div class="wrap-thumbnail col-xs-12 col-sm-6 col-md-4" ng-repeat="newsItem in $ctrl.news">
+            
+            <div class="thumbnail">
+              <a href="#!/{{$ctrl.newsCategory}}/{{newsItem.id}}" class="thumb">
+                <img ng-src="{{newsItem.imageURL}}" alt="{{newsItem.name}}" />
+              </a>
+              <div class="wrap-news-title">
+                <div class="news-title">
+                  <span>{{newsItem.title}}</span>
+                </div>
+              </div>
+              <a href="#!/{{$ctrl.newsCategory}}/{{newsItem.id}}" class="btn btn-primary btn-xs pull-right">Читать больше &rarr;</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
